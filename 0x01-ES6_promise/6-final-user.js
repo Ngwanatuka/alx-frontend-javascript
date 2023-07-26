@@ -1,12 +1,11 @@
-/* eslint-disable max-len */
 import signUpUser from './4-user-promise';
 import uploadPhoto from './5-photo-reject';
 
 export default function handleProfileSignup(firstName, lastName, fileName) {
-  const signUpPromise = signUpUser(firstName, lastName);
-  const uploadPromise = uploadPhoto(fileName);
-
-  return Promise.allSettled([signUpPromise, uploadPromise]).then((results) => results.map((result) => ({
+  return Promise.allSettled([
+    signUpUser(firstName, lastName),
+    uploadPhoto(fileName),
+  ]).then((data) => data.map((result) => ({
     status: result.status,
     value: result.status === 'fulfilled' ? result.value : result.reason,
   })));
