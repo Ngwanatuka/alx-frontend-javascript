@@ -1,12 +1,10 @@
-/* eslint-disable no-unused-vars */
-function getFullResponseFromAPI(success) {
-  return new Promise((resove, reject) => {
+export default function getFullResponseFromAPI(success) {
+  return new Promise((resolve, reject) => {
     if (success) {
-      const response = {
+      resolve({
         status: 200,
         body: 'Success',
-      };
-      resove(response);
+      });
     } else {
       reject(new Error('The fake API is not working currently'));
     }
