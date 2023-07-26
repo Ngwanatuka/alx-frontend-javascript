@@ -3,4 +3,3 @@ node_modules
 .baseDir.js
 ```.eslintrc.js
 ```babel.config.js
-test.js
