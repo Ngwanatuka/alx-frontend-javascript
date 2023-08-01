@@ -1,11 +1,10 @@
-function cleanSet(set, startingString) {
-  if (!startingString || !set || startingString.length === 0) {
+function cleanSet(set, startString) {
+  if (!startString || !set || startString.length === 0) {
     return '';
   }
-
   return Array.from(set)
-    .filter((item) => item.startsWith(startingString))
-    .map((item) => item.slice(startingString.length))
+    .filter((item) => item.startsWith(startString))
+    .map((item) => item.slice(startString.length))
     .join('-');
 }
 
