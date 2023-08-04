@@ -1,9 +1,13 @@
+/* eslint-disable @typescript-eslint/camelcase */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-empty-function */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 /******/ (() => { // webpackBootstrap
-var __webpack_exports__ = {};
+const __webpack_exports__ = {};
 /*!********************!*\
   !*** ./js/main.ts ***!
   \********************/
-var Director = /** @class */ (function () {
+const Director = /** @class */ (function () {
     function Director() {
     }
     Director.prototype.workFromHome = function () {
@@ -17,7 +21,7 @@ var Director = /** @class */ (function () {
     };
     return Director;
 }());
-var Teacher = /** @class */ (function () {
+const Teacher = /** @class */ (function () {
     function Teacher() {
     }
     Teacher.prototype.workFromHome = function () {
