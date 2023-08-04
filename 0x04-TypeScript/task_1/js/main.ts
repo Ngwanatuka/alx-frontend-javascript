@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/class-name-casing */
 class Teacher {
     firstName: string;
     lastName: string;
@@ -38,3 +39,18 @@ console.log(director1);
 const teacher3 = new Teacher("John", "Doe", false, "London");
 
 console.log(teacher3.toString());
+
+// Define the function
+function printTeacher(firstName: string, lastName: string): string {
+    const firstLetter = firstName.charAt(0).toUpperCase();
+    const formattedLastName = lastName.charAt(0).toUpperCase() + lastName.slice(1);
+    return `${firstLetter}. ${formattedLastName}`;
+}
+
+// Define the interface
+interface printTeacherFunction {
+    (firstName: string, lastName: string): string;
+}
+
+// Test the function
+console.log(printTeacher("John", "Doe"));
