@@ -1,33 +1,28 @@
-import { Subjects } from './subjects/Subjects';
-import { Cpp } from './subjects/Cpp';
-import { Java } from './subjects/Java';
-import { React } from './subjects/React';
-import { Teacher } from './subjects/Teacher';
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Cpp_1 = require("./subjects/Cpp");
+var Java_1 = require("./subjects/Java");
+var React_1 = require("./subjects/React");
 // Create constants for each subject
-const cpp = new Cpp();
-const java = new Java();
-const react = new React();
-
+var cpp = new Cpp_1.Cpp();
+var java = new Java_1.Java();
+var react = new React_1.React();
 // Create a Teacher object with experienceTeachingC = 10
-const cTeacher: Subjects.Teacher = {
+var cTeacher = {
     firstName: "John",
     lastName: "Doe",
     experienceTeachingC: 10,
 };
-
 // For Cpp subject
 cpp.setTeacher(cTeacher);
 console.log("Cpp:");
 console.log(cpp.getRequirements());
 console.log(cpp.getAvailableTeacher());
-
 // For Java subject
 java.setTeacher(cTeacher);
 console.log("Java:");
 console.log(java.getRequirements());
 console.log(java.getAvailableTeacher());
-
 // For React subject
 react.setTeacher(cTeacher);
 console.log("React:");
