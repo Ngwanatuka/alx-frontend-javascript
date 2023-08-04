@@ -3,6 +3,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const { compilation } = require("webpack");
 
 module.exports = {
   entry: "./js/main.ts",
@@ -32,7 +33,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Development",
       filename: "index.html",
-      template: "./dist/index.html"
+      template: "./templates/index.template.html"
     }),
   ],
   output: {
