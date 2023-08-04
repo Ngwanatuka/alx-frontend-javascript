@@ -54,3 +54,37 @@ interface printTeacherFunction {
 
 // Test the function
 console.log(printTeacher("John", "Doe"));
+
+interface StudentConstructor {
+    firstName: string;
+    lastName: string;
+}
+
+interface StudentInterface {
+    workOnHomework(): string;
+    displayName(): string;
+}
+
+class StudentClass implements StudentInterface {
+    firstName: string;
+    lastName: string;
+
+    constructor({ firstName, lastName }: StudentConstructor) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    workOnHomework(): string {
+        return "Currently working";
+    }
+
+    displayName(): string {
+        return this.firstName;
+    }
+}
+
+const student1 = new StudentClass({ firstName: "Alice", lastName: "Johnson" });
+
+console.log(student1.workOnHomework()); // Output: Currently working
+console.log(student1.displayName());    // Output: Alice
+
