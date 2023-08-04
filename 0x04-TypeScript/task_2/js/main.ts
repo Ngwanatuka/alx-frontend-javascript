@@ -59,6 +59,19 @@ function executeWork(employee: Director | Teacher) {
     }
 }
 
+type Subjects = 'Math' | 'History';
+
+function teachClass(todayClass: Subjects): string {
+    if (todayClass === 'Math') {
+        return 'Teaching Math';
+    }else {
+        return 'Teaching History';
+    }
+}
+
+console.log(teachClass('Math')); // Output: Teaching Math
+console.log(teachClass('History')); // Output: Teaching History
+
 executeWork(createEmployee(200)); // Output: Getting to work
 executeWork(createEmployee(1000)); // Output: Getting to director tasks
 
